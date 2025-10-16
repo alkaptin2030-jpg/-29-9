@@ -1,0 +1,1 @@
+function a(t,n){return n==="send"?0:Math.round(t*.01*100)/100}function e(t,n,o=0){const r=a(t,n),u=Math.max(0,r-o);return Math.round(u*100)/100}function c(t,n,o,r){return r==="from_amount"?Math.max(0,Math.round((t-o)*100)/100):Math.round(t*100)/100}export{a as calculateCommission,c as calculateNetAmount,e as calculateProfit};
