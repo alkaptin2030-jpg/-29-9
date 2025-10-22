@@ -1,0 +1,6 @@
+import{c as A,Z as M,$ as m,a0 as y,k as v,o as b,a1 as k,H as q}from"./index-uPMs_SiV.js";/**
+ * @license lucide-react v0.462.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const w=A("ExternalLink",[["path",{d:"M15 3h6v6",key:"1q9fwt"}],["path",{d:"M10 14 21 3",key:"gplh6r"}],["path",{d:"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6",key:"a6xqqp"}]]);async function x({title:n,message:e,audienceKey:a,createdBy:i,linkUrl:s}){const d={title:n,message:e,audienceKey:a,active:!0,createdAt:q(),createdBy:i||null,linkUrl:s||void 0};return(await k(y(v,"broadcasts"),d)).id}function B(n,e){const a=new Map,i=n.map(s=>{const d=M(y(v,"broadcasts"),m("audienceKey","==",s));return b(d,r=>{r.docChanges().forEach(t=>{const c=t.doc.data(),o=t.doc.id,l={...c,id:o};t.type==="removed"?a.delete(o):a.set(o,l)});const u=Array.from(a.values()).filter(t=>t.active===!0);if(u.length===0){e(null);return}const p=u.sort((t,c)=>{var f,h;const o=typeof((f=t.createdAt)==null?void 0:f.toMillis)=="function"?t.createdAt.toMillis():0,l=typeof((h=c.createdAt)==null?void 0:h.toMillis)=="function"?c.createdAt.toMillis():0;return o-l});e(p[p.length-1])},r=>{console.error("subscribeToActiveBroadcasts error:",r),e(null)})});return()=>i.forEach(s=>s())}export{w as E,x as p,B as s};
